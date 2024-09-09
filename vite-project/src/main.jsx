@@ -12,9 +12,9 @@ import { AuthLayout, Login } from './components/index.js'; // Ensure Protected i
 import Post from "./pages/Post";
 import Home from "./pages/Home";
 import AddPost from "./pages/AddPost";
-import Signup from './pages/signup.jsx';
+import Signup from './pages/Signup.jsx';
 import EditPost from "./pages/Editpost";
-import UserProfile from './pages/userlogindata.jsx';
+import UserProfile from './pages/Userlogindata.jsx';
 import UpdateForm from './pages/update.jsx';
 import AllPosts from "./pages/AllPost";
 import Protected from "./components/isowner.jsx"

@@ -3,8 +3,8 @@ import Footer from "./footer/footer"
 import Container from "./container/container";
 import LogoutBtn from "./header/logoutbtn";
 import RTE from "./RTE" ;
-import Signup from "./Signup" ;
-import Login from "./Login";
+import Signup from "./signup" ;
+import Login from "./login";
 import PostForm from "./postform/postform";
 import Select from "./select";
 import PostCard from "./postcard"

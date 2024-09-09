@@ -13,7 +13,7 @@ import Post from "./pages/Post";
 import Home from "./pages/Home";
 import AddPost from "./pages/AddPost";
 import Signup from './pages/signup.jsx';
-import EditPost from "./pages/EditPost";
+import EditPost from "./pages/Editpost";
 import UserProfile from './pages/userlogindata.jsx';
 import UpdateForm from './pages/update.jsx';
 import AllPosts from "./pages/AllPost";

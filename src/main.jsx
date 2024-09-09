@@ -11,13 +11,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AuthLayout, Login } from './components/index.js'; // Ensure Protected is imported
 import Post from "./pages/Post";
 import Home from "./pages/Home";
-import AddPost from "./pages/AddPost";
-import Signup from './pages/signup.jsx';
-import EditPost from "./pages/EditPost";
-import UserProfile from './pages/userlogindata.jsx';
-import UpdateForm from './pages/update.jsx';
-import AllPosts from "./pages/AllPost";
-import Protected from "./components/isowner.jsx"
+import AddPost from "./pages/AddPost.jsx";
+import Signup from './pages/Signup.jsx';
+import EditPost from "./pages/Editpost.jsx";
+import UserProfile from './pages/Userlogindata.jsx';
+import UpdateForm from './pages/Update.jsx';
+import AllPosts from "./pages/AllPost.jsx";
+import Protected from "./components/Isowner.jsx"
 
 // Create the router with updated routes
 const router = createBrowserRouter([

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "../store/authslice";
+import { login } from "../store/authslice.js";
 import { Input } from "./index.js";
 import { useDispatch } from "react-redux";
-import { fetchUserData, createaccount } from "../appwrite/auth";
+import { fetchUserData, createaccount } from "../appwrite/auth.js";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';

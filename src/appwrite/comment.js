@@ -15,8 +15,8 @@ export const addComment = async (postId, commentText, user) => {
   try {
     // Step 1: Create the comment in the comments collection
     const commentResponse = await databases.createDocument(
-      '66c49130002c58140821', // Replace with your comments collection ID
-      '66d45230001f221e8b25', // Replace with your comments collection ID
+      conf.appwriteDatabaseId ,
+      conf.appwriteCollectionId2,
       ID.unique(), // Generates a unique ID for the comment
       {
         postId, // Associate the comment with the post using Document ID
@@ -54,8 +54,8 @@ export async function deleteComment(commentid){
   console.log(commentid)
   try{
       await databases.deleteDocument(
-        '66c49130002c58140821', // Replace with your comments database ID
-        '66d45230001f221e8b25', // Replace with your comments collection ID
+        conf.appwriteDatabaseId ,
+        conf.appwriteCollectionId2,
         commentid , // documentId
       )
       return true ;

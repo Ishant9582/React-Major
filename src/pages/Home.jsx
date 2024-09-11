@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 const Home = () => {
+
+  const authstatus = useSelector((state) => state.auth.status);
+  const user = useSelector((state)=>state.auth.userData)
+  console.log(authstatus)
+
   return (
     <div className="min-h-screen bg-gray-900 text-white  ">
+      {!authstatus && 
+            <nav>
+            <marquee >WELCOME!! Please Login To Explore More </marquee>
+          </nav>
+      }
+      {
+        authstatus && 
+        <nav>
+        <marquee >WELCOME !! Back {user.name}</marquee>
+        </nav>
+      }
+
       {/* Header Section */}
 
-  
+
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center pt-20 pb-12">
         <h1 className="text-5xl md:text-6xl font-bold mb-4 transform hover:scale-110 transition-transform duration-300">
@@ -15,9 +34,9 @@ const Home = () => {
           We provide innovative solutions that help businesses thrive in the digital world.
         </p>
         <Link to={"https://www.google.com/"}>
-        <button className="mt-8 px-6 py-3 bg-green-500 hover:bg-green-400 transform hover:scale-105 transition-transform duration-300 rounded-md text-xl">
-          Learn More
-        </button>
+          <button className="mt-8 px-6 py-3 bg-green-500 hover:bg-green-400 transform hover:scale-105 transition-transform duration-300 rounded-md text-xl">
+            Learn More
+          </button>
         </Link>
       </section>
 

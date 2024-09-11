@@ -45,9 +45,9 @@ export default function Header() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="https://cc-prod.scene7.com/is/image/CCProdAuthor/mascot-logo-design_P1_900x420?$pjpeg$&jpegSize=200&wid=900"
               className="h-8"
-              alt="Flowbite Logo"
+              alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Postolio

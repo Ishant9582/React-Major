@@ -9,7 +9,7 @@ export default function footer() {
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
                             <a href="https://flowbite.com/" class="flex items-center">
-                                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                                <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/mascot-logo-design_P1_900x420?$pjpeg$&jpegSize=200&wid=900" class="h-8 me-3" alt="FlowBite Logo" />
                                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Postolio</span>
                             </a>
                         </div>

@@ -10,17 +10,19 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white  ">
+     
       {!authstatus && 
             <nav>
-            <marquee >WELCOME!! Please Login To Explore More </marquee>
+            <marquee className="mt-8" >WELCOME!! Please Login To Explore More </marquee>
           </nav>
       }
       {
         authstatus && 
         <nav>
-        <marquee >WELCOME !! Back {user.name}</marquee>
+        <marquee className="mt-8">WELCOME !! Back {user.name}</marquee>
         </nav>
       }
+   
 
       {/* Header Section */}
 

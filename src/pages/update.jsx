@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Client, Account } from 'appwrite';
 import conf from "../conf/conf"
+import { Link } from 'react-router-dom';
 import { Navigate, useNavigate } from 'react-router-dom';
 const UpdateForm = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ const UpdateForm = () => {
       setStatus('User information updated successfully!');
       navigate("/")
     } catch (error) {
-      setStatus('Error updating user information.');
+      setStatus(`Error updating user information : As you are entering same username or email or check password`);
       console.error("Update error:", error);
     }
   };
@@ -82,7 +83,13 @@ const UpdateForm = () => {
           Update Info
         </button>
       </form>
+
+    
+      <Link to={"/getuser/data/io"}>
+    <button className="mt-6 bg-blue-500 text-white py-2 px-4 rounded shadow hover:bg-blue-600 transition duration-300" > Back</button>
+    </Link>
       {status && <p className={`mt-4 text-center ${status.startsWith('Error') ? 'text-red-600' : 'text-green-600'}`}>{status}</p>}
+
     </div>
   );
 };

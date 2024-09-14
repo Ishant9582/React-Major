@@ -19,7 +19,7 @@ const UpdateForm = () => {
 
   // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     setStatus('Updating...');
 
     try {

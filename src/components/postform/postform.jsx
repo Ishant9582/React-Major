@@ -57,9 +57,9 @@ export default function PostForm({ post }) {
                 console.log(file);
 
                 if (file) {
-                    console.log("file found");
-                    const fileId = file.$id;
-                    data.image = fileId;
+                    console.log("file found") ;
+                    const fileId = file.$id ;
+                    data.image = fileId ;
                     const dbPost = await createPost({ ...data, userid: userData.$id });
                     console.log(dbPost);
 

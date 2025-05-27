@@ -8,11 +8,9 @@ export default function Protected({ children, authentication = false }) {
     const location = useLocation();
     const [loading, setLoading] = useState(true);
     const authStatus = useSelector(state => state.auth.status);
-    
     useEffect(() => {
         const isAuthenticated = authStatus === true;
         const redirectTo = location.state?.from?.pathname || "/";
-        
         if (authentication && !isAuthenticated) {
             toast.error("please login first to perform this action")
             navigate("/login", { state: { from: location } });

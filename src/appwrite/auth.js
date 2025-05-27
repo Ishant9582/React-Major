@@ -3,7 +3,7 @@ import conf from "../conf/conf"
 export  const client = new Client()
     .setEndpoint(conf.appwriteUrl)
     .setProject(conf.appwriteProjectId);
-     
+    
 export  const account  =  new Account(client) ;
 export  async function createaccount({email,password,name}){
     try{
@@ -32,7 +32,6 @@ export  async function login({email,password}){
 }
 
 export  async function getcurrentuser(){
-   
     try{
        
         return await account.get()
@@ -63,23 +62,3 @@ export async function fetchUserData() {
     }
   }
 
-//   export const updateUserData = async (newUsername, newEmail) => {
-//     const databaseId = 'conf.appwriteDatabaseId';    // Replace with your database ID
-//     const collectionId = 'conf.appwriteCollectionId';  // Replace with your collection ID
-//     const documentId = '[DOCUMENT_ID]';   // Replace with the document (user) ID you want to update
-  
-//     try {
-//       const response = await account.updateDocument(
-//         databaseId ,
-//         collectionId ,
-//         documentId ,
-//         {
-//           username: newUsername ,   
-//           email: newEmail ,
-//         }
-//       );
-//       return response;
-//     } catch (error) {
-//       throw new Error("Failed to update user");
-//     }
-//   };

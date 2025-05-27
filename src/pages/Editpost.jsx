@@ -4,12 +4,10 @@ import { getPost } from "../appwrite/config";
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 function EditPost() {
     const [post, setPosts] = useState(null);
     const { slug } = useParams();
     const navigate = useNavigate();
-
     useEffect(() => {
         const fetchPostData = async () => {
             if (slug) {
@@ -47,5 +45,4 @@ function EditPost() {
         </div>
     );
 }
-
 export default EditPost;

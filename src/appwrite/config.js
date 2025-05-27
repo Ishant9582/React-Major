@@ -8,7 +8,6 @@ export const client = new Client()
     .setProject(conf.appwriteProjectId);
 
 export const databases = new Databases(client);
-
 export const bucket = new Storage(client)
 
 // create

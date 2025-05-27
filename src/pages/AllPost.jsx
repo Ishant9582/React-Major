@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Container, PostCard } from '../components';
 import { getPosts } from "../appwrite/config";
 import { useDispatch } from 'react-redux';
-import { postin , postout} from '../store/postslice';
 function AllPosts() {
     console.log("entering all post section");
     const [posts, setPosts] = useState([]);
     const dispatch = useDispatch() ;
     useEffect(() => {
-
-        
         getPosts([]).then((posts) => {
             if (posts) {
                 console.log("getting posts");

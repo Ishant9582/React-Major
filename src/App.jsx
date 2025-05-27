@@ -6,7 +6,7 @@ import './index.css';
 import {fetchUserData} from './appwrite/auth';
 import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-function App() {
+function App(){
   const [loading , setloading] = useState(true)
   const dispatch = useDispatch()
   useEffect(()=>{

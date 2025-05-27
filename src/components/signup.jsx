@@ -7,7 +7,6 @@ import { fetchUserData, createaccount } from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
 function Signup() {
     const navigate = useNavigate();
     const [error, setError] = useState("");
@@ -16,11 +15,10 @@ function Signup() {
 
     const create = async (data) => {
         setError("");
-        try {
+        try{
             const userData = await createaccount(data);
-
             if (userData) {
-                const userData = await fetchUserData();
+                const userData = await fetchUserData() ;
                 
                 if (userData) {
                     dispatch(login({ userData }));

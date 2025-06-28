@@ -133,11 +133,14 @@ export async function deleteFile(fileId){
 
 export async function fetchImage(image){
     try {
+        console.log(image) ;
         // Replace 'bucketID' with your actual bucket ID
-        const result = await bucket.getFilePreview(conf.appwriteBucketId, image);
+        const result = await bucket.getFileView(conf.appwriteBucketId, image);
+
 
         // Create URL to access the image
         const imageURL = result.href;
+        console.log("Image URL: ", imageURL);
         return imageURL ;
         
     } catch (error) {
